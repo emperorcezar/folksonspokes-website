@@ -124,7 +124,7 @@ WYM_TOOLS = ",\n".join(["{'name': 'Bold', 'title': 'Strong', 'css': 'wym_tools_s
     ])
 
 
-ROOT_URLCONF = 'mycms.urls'
+ROOT_URLCONF = 'website.urls'
 
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, 'templates'),

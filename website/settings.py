@@ -150,4 +150,13 @@ INSTALLED_APPS = (
     'cms.plugins.googlemap',
     'sekizai',
     'gunicorn',
+    'storages',
 )
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+AWS_ACCESS_KEY_ID = 'AKIAIF7HBYUPT7MUS3VQ'
+
+AWS_SECRET_ACCESS_KEY = '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'
+
+AWS_STORAGE_BUCKET_NAME = 'website_media'

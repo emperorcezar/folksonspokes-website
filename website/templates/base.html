@@ -1,0 +1,100 @@
+{% load cms_tags sekizai_tags %}
+<doctype html>
+  <html>
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+      <title>Folks on Spokes</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+      <script src="{{ STATIC_URL }}bootstrap/js/bootstrap.js"></script>
+      <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}bootstrap/css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/style.css" />
+      <!-- render css -->
+      {% render_block "css" %}
+      <!-- render js -->
+      {% render_block "js" %}
+
+    </head>
+    <body>
+      {% cms_toolbar %}
+      <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            {% load cache menu_tags %}
+            <ul class="nav">
+              {% show_menu 0 100 100 100 %}
+            </ul>            
+<!-- <ul class="nav"> -->
+            <!--   <li class="active"><a href="index.html">Home</a></li> -->
+            <!--   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">About FOS</a> -->
+            <!--     <ul class="dropdown-menu"> -->
+            <!--       <li><a href="about.html">About FOS</a></li> -->
+            <!--       <li><a href="Activities.htm">Activities</a></li> -->
+            <!--       <li><a href="Advocacy.htm">Advocacy</a></li> -->
+            <!--       <li><a href="Biking.htm">Biking</a></li> -->
+            <!--       <li><a href="http://www.folksonspokes.com/cgi-bin/forum/Blah.pl">Bulletin Board</a></li> -->
+            <!--       <li><a href="http://www.folksonspokes.com/cgi-bin/forum/Blah.pl?v-cal/">Calendar</a></li> -->
+            <!--       <li><a href="officers.html">Contact Us</a></li> -->
+            <!--       <li><a href="friends.html">Fun and Friends</a></li> -->
+            <!--       <li><a href="hiking.htm">Hiking</a></li> -->
+            <!--       <li><a href="joinFOS.html">Join FOS</a></li> -->
+            <!--       <li><a href="mileclub.html">Mileage Club</a></li> -->
+            <!--       <li><a href="meeting.html">Next Meeting</a></li> -->
+            <!--       <li><a href="officers.html">Officers</a></li> -->
+            <!--       <li><a href="overniters.htm">Overnighters</a></li> -->
+            <!--       <li><a href="skiing.htm">Skiing</a></li> -->
+            <!--       <li><a href="turtles.html">Turtles</a></li> -->
+            <!--     </ul> -->
+            <!--   </li> -->
+            <!--   <li class="dropdown"><a class="dropdown-toggle" href="#">Current Activities</a> -->
+            <!--     <ul class="dropdown-menu"> -->
+            <!--       <li><a href="http://www.folksonspokes.com/cgi-bin/forum/Blah.pl?v-cal/">Calendar</a></li> -->
+            <!--       <li><a href="http://www.folksonspokes.com/cgi-bin/forum/Blah.pl">Bulletin Board</a></li> -->
+            <!--       <li><a href="http://www.folksonspokes.com/cgi-bin/forum/Blah.pl?b-hikes/">Hike Schedule</a></li> -->
+            <!--       <li><a href="http://www.folksonspokes.com/cgi-bin/forum/Blah.pl?b-clubrides/">Ride Schedule</a></li> -->
+            <!--       <li><a href="mailto:fosmiles@customized-applications.com">Report Mileage</a></li> -->
+            <!--       <li><a href="http://www.folksonspokes.com/cgi-bin/forum/Blah.pl?b-Meetings/">Monthly Meeting</a></li> -->
+            <!--       <li><a href="http://www.folksonspokes.com/joinFOS.html">Join FOS</a></li> -->
+            <!--     </ul> -->
+            <!--   </li> -->
+            <!--   <li class="dropdown"><a href="#" class="dropdown-toggle">Summer Activities</a> -->
+            <!--     <ul class="dropdown-menu"> -->
+            <!--       <li><a href="http://www.folksonspokes.com/cgi-bin/forum/Blah.pl?v-cal/">Calender</a></li> -->
+            <!--       <li><a href="http://www.folksonspokes.com/cgi-bin/forum/Blah.pl?b-clubrides/">Ride Schedule</a></li> -->
+            <!--     </ul> -->
+            <!--   </li> -->
+            <!--   <li class="dropdown"><a href="#" class="dropdown-toggle">Winter Activities</a> -->
+            <!--     <ul class="dropdown-menu"> -->
+            <!--       <li><a href="http://www.folksonspokes.com/cgi-bin/forum/Blah.pl?v-cal/">Calendar</a></li> -->
+            <!--       <li><a href="http://www.folksonspokes.com/cgi-bin/forum/Blah.pl?b-hikes/">Hike Schedule</a></li> -->
+            <!--       <li><a href="hiking.htm">Hiking</a></li> -->
+            <!--       <li><a href="skiing.htm">Skiing</a></li> -->
+            <!--     </ul> -->
+            <!--   </li> -->
+            <!--   <li><a href="Easter.html">Easter Ride</a></li> -->
+            <!--   <li class="dropdown"><a href="#" class="dropdown-toggle">Aids</a> -->
+            <!--     <ul class="dropdown-menu"> -->
+            <!--       <li><a href="http://www.folksonspokes.com/cgi-bin/forum/Blah.pl">Bulletin Board</a></li> -->
+            <!--       <li><a href="http://www.folksonspokes.com/cgi-bin/forum/Blah.pl?v-cal/">Calendar</a></li> -->
+            <!--       <li><a href="createMaps.html">Make Maps</a></li> -->
+            <!--       <li><a href="contact politicians.htm">Contact Politicians</a></li> -->
+            <!--       <li><a href="joinFOS.html">Join FOS</a></li> -->
+            <!--       <li><a href="Links.html">Links</a></li> -->
+            <!--       <li><a href="tipsindex.html">Tips</a></li> -->
+            <!--     </ul> -->
+            <!--   </li> -->
+            <!-- </ul> -->
+
+          </div>
+        </div>
+      </div>
+      <div class="container" id="body">
+        {% block body %}
+        {% endblock body %}
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function() {
+          $('.dropdown-toggle').dropdown();
+      });
+      </script>
+    </body>
+  </html>

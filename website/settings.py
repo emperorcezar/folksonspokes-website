@@ -47,7 +47,7 @@ USE_L10N = True
 # Example: "/home/media/media.lawrence.com/"
 MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
 
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static-files')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -91,10 +91,38 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'sekizai.context_processors.sekizai',
 )
 
+# CMS Configs
+CMS_REDIRECTS = True
+
 CMS_TEMPLATES = (
-    ('template_1.html', 'Template 1'),
-    ('template_2.html', 'Template 2'),
+    ('main.html', 'Main Template'),
+    ('splashpage.html', 'Splash Page'),
 )
+
+CMS_LANGUAGES = (
+    ('en', gettext('English')),
+)
+
+WYM_TOOLS = ",\n".join(["{'name': 'Bold', 'title': 'Strong', 'css': 'wym_tools_strong'}",
+    "{'name': 'Italic', 'title': 'Emphasis', 'css': 'wym_tools_emphasis'}",
+    "{'name': 'Superscript', 'title': 'Superscript', 'css': 'wym_tools_superscript'}",
+    "{'name': 'Subscript', 'title': 'Subscript', 'css': 'wym_tools_subscript'}",
+    "{'name': 'InsertOrderedList', 'title': 'Ordered_List', 'css': 'wym_tools_ordered_list'}",
+    "{'name': 'InsertUnorderedList', 'title': 'Unordered_List', 'css': 'wym_tools_unordered_list'}",
+    "{'name': 'Indent', 'title': 'Indent', 'css': 'wym_tools_indent'}",
+    "{'name': 'Outdent', 'title': 'Outdent', 'css': 'wym_tools_outdent'}",
+    "{'name': 'Undo', 'title': 'Undo', 'css': 'wym_tools_undo'}",
+    "{'name': 'Redo', 'title': 'Redo', 'css': 'wym_tools_redo'}",
+    "{'name': 'Paste', 'title': 'Paste_From_Word', 'css': 'wym_tools_paste'}",
+    "{'name': 'ToggleHtml', 'title': 'HTML', 'css': 'wym_tools_html'}",
+    "{'name': 'CreateLink', 'title': 'Link', 'css': 'wym_tools_link'}",
+    "{'name': 'Unlink', 'title': 'Unlink', 'css': 'wym_tools_unlink'}",
+    "{'name': 'InsertImage', 'title': 'Image', 'css': 'wym_tools_image'}",
+    "{'name': 'InsertTable', 'title': 'Table', 'css': 'wym_tools_table'}",
+    "{'name': 'ToggleHtml', 'title': 'HTML', 'css': 'wym_tools_html'}",
+    "{'name': 'Preview', 'title': 'Preview', 'css': 'wym_tools_preview'}",
+    ])
+
 
 ROOT_URLCONF = 'mycms.urls'
 

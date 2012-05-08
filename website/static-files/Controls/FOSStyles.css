@@ -1,0 +1,132 @@
+.bluebackground {
+	background-image: url(../images/Logos/blegtext.gif);
+}
+.backgroundblue {
+	background-image: url(../images/Logos/blegtext.gif);
+}
+.txtTable {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: bold;
+	color: #000000;
+}
+.txtTableHead {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+}
+
+.txtnewsHead {
+	font-family: "Times New Roman", Times, serif;
+	font-size: large;
+	font-weight: bold;
+	color: #000000;
+	background-color: #C4FFB4;
+}
+.author {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.textLayer {
+
+	font-family: "Times New Roman", Times, serif;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	color: #000000;
+	letter-spacing: normal;
+	text-align: left;
+	word-spacing: normal;
+}
+.DiscountHead {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+}
+.linkshead {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FF3300;
+	text-decoration: underline;
+}
+.linkText {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 12px;
+	font-style: normal;
+	color: #000000;
+}
+.calendarDate {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	background-color: #64748B;
+	font-weight: bolder;
+}
+.calendarEvent {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	font-weight: bolder;
+	color: #000000;
+	background-color: #C4FFB4;
+}
+.header {
+	background-image: url(../header2006.swf);
+	background-repeat: no-repeat;
+	background-position: left top;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	border: thin solid #00FF00;
+	visibility: visible;
+	height: auto;
+	width: auto;
+}
+body {
+	background-color: #C4FFB4;
+}
+
+.nav {
+	border: thin solid #0000FF;
+
+	position:absolute
+	height: 300px;
+	width: 300px;
+	left: 0px;
+	top: 800px;
+	position: fixed;
+	}
+.wrapper {
+	border: thin double #FF0000;
+}
+p {
+
+	font-family: "Times New Roman", Times, serif;
+	font-size: 16px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	color: #000000;
+	letter-spacing: normal;
+	text-align: left;
+	word-spacing: normal;
+}
+.footer {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #666666;
+	padding: 2px;
+	background-color: #CCCCCC;	
+}
+
+.ul, .li {
+	font-family:"Times New Roman", Times, serif;
+	font-size:14px;
+	font-style:normal;
+	}

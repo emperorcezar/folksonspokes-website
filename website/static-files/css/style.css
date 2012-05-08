@@ -1,0 +1,44 @@
+body {
+    background-color: #C4FFB4;
+}
+
+#body {
+    margin-top: 50px;
+}
+
+#content {
+    margin-top: 2em;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.35em;
+}
+
+#quick-picks form {
+    margin: 0em;
+}
+
+#quick-picks select {
+    width: 190px;
+}
+
+#splashpage-main {
+    font-size: 1.1em;
+}
+
+#splashpage-main h1 {
+    margin-bottom: 1em;
+}
+
+#top-hr {
+    margin-bottom: 1em;
+}
+
+#footer-logos {
+    width: 100%;
+}
+
+.align-right {
+    float: right;
+}

@@ -47,7 +47,7 @@ USE_L10N = True
 # Example: "/home/media/media.lawrence.com/"
 #MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
 
-#STATIC_ROOT = os.path.join(PROJECT_DIR, 'static-files')
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 STATICFILES_DIRS = (
     os.path.join(PROJECT_DIR, 'static-files'),

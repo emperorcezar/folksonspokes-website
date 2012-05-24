@@ -5,12 +5,19 @@
     <a href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">{{ child.get_menu_title }}</a>
     {% else %}
      <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ child.get_menu_title }}<b class="caret"></b></a>
-    {% endif %}
-    
-	{% if child.children %}
-    <ul class="dropdown-menu">
-        {% show_menu from_level to_level extra_inactive extra_active template "" "" child %}
-    </ul>
+      {% if child.children %}
+        <ul class="dropdown-menu">
+        {% for child2 in child.children %}
+          {% if child2.children %}
+            <li class="divider"></li>
+            <li class="nav-header"><a href="{{ child2.attr.redirect_url|default:child2.get_absolute_url }}">{{ child2.get_menu_title }}</a></li>
+            {% for child3 in child2.children %}
+              <li><a href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">{{ child.get_menu_title }}</a></li>
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+        </ul>
+      {% endif %}
     {% endif %}
 </li>
 {% endfor %}

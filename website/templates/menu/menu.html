@@ -9,16 +9,16 @@
         <ul class="dropdown-menu">
         {% for child2 in child.children %}
           {% if child2.children %}
-          <li><a href="{{ child2.attr.redirect_url|default:child2.get_absolute_url }}">{{ child2.get_menu_title }}</a>
+          <li class="{% if child.selected %}active{% endif %}{% if child.ancestor %}active{% endif %}{% if child.sibling %}sibling{% endif %}{% if child.descendant %}descendant{% endif %}"><a href="{{ child2.attr.redirect_url|default:child2.get_absolute_url }}">{{ child2.get_menu_title }}</a>
           <ul class="dropdown-menu">
-            <li><a href="{{ child2.attr.redirect_url|default:child2.get_absolute_url }}">{{ child2.get_menu_title }} Home</a></li>
+            <li class="{% if child.selected %}active{% endif %}{% if child.ancestor %}active{% endif %}{% if child.sibling %}sibling{% endif %}{% if child.descendant %}descendant{% endif %}"><a href="{{ child2.attr.redirect_url|default:child2.get_absolute_url }}">{{ child2.get_menu_title }} Home</a></li>
             {% for child3 in child2.children %}
-              <li><a href="{{ child3.attr.redirect_url|default:child3.get_absolute_url }}">{{ child3.get_menu_title }}</a></li>
+              <li class="{% if child.selected %}active{% endif %}{% if child.ancestor %}active{% endif %}{% if child.sibling %}sibling{% endif %}{% if child.descendant %}descendant{% endif %}"><a href="{{ child3.attr.redirect_url|default:child3.get_absolute_url }}">{{ child3.get_menu_title }}</a></li>
             {% endfor %}
           </ul>
           </li>
           {% else %}
-            <li><a href="{{ child2.attr.redirect_url|default:child2.get_absolute_url }}">{{ child2.get_menu_title }}</a></li>
+            <li class="{% if child.selected %}active{% endif %}{% if child.ancestor %}active{% endif %}{% if child.sibling %}sibling{% endif %}{% if child.descendant %}descendant{% endif %}"><a href="{{ child2.attr.redirect_url|default:child2.get_absolute_url }}">{{ child2.get_menu_title }}</a></li>
           {% endif %}
         {% endfor %}
         </ul>

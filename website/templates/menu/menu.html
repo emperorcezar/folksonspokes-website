@@ -15,7 +15,7 @@
               <li><a href="{{ child3.attr.redirect_url|default:child3.get_absolute_url }}">{{ child3.get_menu_title }}</a></li>
             {% endfor %}
           {% else %}
-            <li><a href="{{ child3.attr.redirect_url|default:child3.get_absolute_url }}">{{ child3.get_menu_title }}</a></li>
+            <li><a href="{{ child2.attr.redirect_url|default:child2.get_absolute_url }}">{{ child2.get_menu_title }}</a></li>
           {% endif %}
         {% endfor %}
         </ul>

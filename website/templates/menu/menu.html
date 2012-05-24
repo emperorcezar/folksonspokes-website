@@ -11,7 +11,7 @@
           {% if child2.children %}
           <li><a href="#">{{ child2.get_menu_title }}</a>
           <ul class="dropdown-menu">
-            <li><a href="{{ child2.attr.redirect_url|default:child2.get_absolute_url }}">Home</a></li>
+            <li><a href="{{ child2.attr.redirect_url|default:child2.get_absolute_url }}">>{{ child2.get_menu_title } Home</a></li>
             {% for child3 in child2.children %}
               <li><a href="{{ child3.attr.redirect_url|default:child3.get_absolute_url }}">{{ child3.get_menu_title }}</a></li>
             {% endfor %}

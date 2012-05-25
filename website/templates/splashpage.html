@@ -37,41 +37,11 @@
   <div class="span3">
 	<div id="quick-picks">
       <form name="menuBuilder">
-	  <select name="Llist_1" onChange="load1(this.form)">
-	    <option value="" selected>Select from this list</option>
-	    <option value="index.html">Home
-	      <option value="about.html">About FOS</option>
-	    <option value="Activities.htm"> Activities</option>
-	    <option value="Advocacy.htm">Advocacy</option>
-	    <option value="Biking.htm">Biking</option>
-	    <option value="http://www.folksonspokes.com/cgi-bin/forum/Blah.pl">Bulletin Board</option>
-	    <option value="http://www.folksonspokes.com/cgi-bin/forum/Blah.pl?v-cal/">Calendar</option>
-	    <option value="contact politicians.htm">Contact Politicians</option>
-	    <option value="officers.html">Contact Us</option>
-	    <option value="easter.html">Easter Ride</option>
-	    <option value="friends.html">Fun and Friends</option>
-	    <option value="http://www.folksonspokes.com/cgi-bin/forum/Blah.pl?b-hikes/">Hike Schedule</option>
-	    <option value="hiking.htm">Hiking</option>
-	    <option value="jersey.htm">Jersey</option>
-	    <option value="joinFOS.html">Join FOS</option>
-	    <option value="Links.html">Links</option>
-	    <option value="http://folksonspokes.com/images/Maps/Maps%202006/2006%20Season%20Maps.pdf">Maps, Club</option>
-	    <option value="createMaps.html">Maps, Create your own</option>
-	    <option value="mileclub.html">Mileage Clubs</option>
-	    <option value="aidsLogs.html#log">Mileage Log</option>
-	    <option value="aidsLogs.html#spreadsheet">Mileage Spreadsheet</option>
-	    <option value="http://www.folksonspokes.com/cgi-bin/forum/Blah.pl?b-Meetings/">Next Meeting</option>
-	    <option value="officers.html">Officers</option>
-	    <option value="overniters.htm">Overniters</option>
-	    <option value="ralph.htm">Ralph's Energy Bar</option>
-	    <option value="mailto:fosmiles@customized-applications.com">Report Mileage</option>
-	    <option value="http://www.folksonspokes.com/cgi-bin/forum/Blah.pl?b-clubrides/">Ride Schedule</option>
-	    <option value="skiing.htm">Skiing</option>
-	    <option value="tipsindex.html">Tips</option>
-	    <option value="turtles.html">Turtles</option>
-	    <option value="weather.html">Weather</option>
+	    <select name="Llist_1" onChange="load1(this.form)">
+          <option value="" selected>Select from this list</option>
+          {% show_menu 0 100 100 100 "quickmpicks.html" %}	    
 	    </select>
-	</form>
+	  </form>
 	<h1>Quick Picks</h1>
       <p><a href="http://www.folksonspokes.com/cgi-bin/forum/Blah.pl?b-Meetings/">Monthly Meeting</a> </p>
 	  <p><br>      

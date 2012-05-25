@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load cms_tags %}
+{% load cms_tags menu_tags %}
 {% block body %}
 <div class="row">
   <div class="span8 offset2">
@@ -39,7 +39,7 @@
       <form name="menuBuilder">
 	    <select name="Llist_1" onChange="load1(this.form)">
           <option value="" selected>Select from this list</option>
-          {% show_menu 0 100 100 100 %}
+          {% show_menu 0 100 100 100 "quickpicks.html" %}	    
 	    </select>
 	  </form>
 	<h1>Quick Picks</h1>

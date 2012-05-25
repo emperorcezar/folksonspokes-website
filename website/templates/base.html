@@ -1,4 +1,5 @@
 {% load cms_tags sekizai_tags %}
+{% load cache menu_tags %}
 <doctype html>
   <html>
     <head>
@@ -19,7 +20,7 @@
       <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
           <div class="container">
-            {% load cache menu_tags %}
+
             <ul class="nav">
               {% show_menu 0 100 100 100 %}
             </ul>            

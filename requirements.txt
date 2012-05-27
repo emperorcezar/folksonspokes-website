@@ -7,3 +7,4 @@ gunicorn==0.13.4
 django-storages
 boto
 django-mptt==0.5.1
+django-tinymce

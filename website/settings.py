@@ -169,4 +169,6 @@ AWS_STORAGE_BUCKET_NAME = 'website_media'
 TINYMCE_DEFAULT_CONFIG = {
     'height': '100%',
     'width': '100%',
+    'theme': "simple",
+    'relative_urls': False,
 }

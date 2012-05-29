@@ -85,6 +85,10 @@ p {
     left: -12px;
 }
 
-.cms_placeholder {
+h2 {
+    margin-bottom: 1em;
+}
+
+iframe {
     margin-bottom: 1em;
 }

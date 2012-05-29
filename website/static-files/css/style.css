@@ -84,3 +84,7 @@ p {
     top: 10px;
     left: -12px;
 }
+
+.cms_placeholder {
+    margin-bottom: 1em;
+}

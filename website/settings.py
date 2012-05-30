@@ -169,6 +169,3 @@ TINYMCE_DEFAULT_CONFIG = {
     'theme': "simple",
     'relative_urls': False,
 }
-
-if 'DATABASES' not in locals():
-    DATABASES = {}

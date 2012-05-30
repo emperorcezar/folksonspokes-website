@@ -1,12 +1,8 @@
 # -*- coding: utf-8 -*-
-import dj_database_url
+import os
 
 if 'DATABASES' not in locals():
     DATABASES = {'default': {}}
-
-DATABASES['default'] = dj_database_url.config()
-
-import os
 
 gettext = lambda s: s
 

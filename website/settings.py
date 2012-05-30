@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 import os
+import dj_database_url
+
+DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
 gettext = lambda s: s
 
@@ -169,7 +172,3 @@ TINYMCE_DEFAULT_CONFIG = {
     'theme': "simple",
     'relative_urls': False,
 }
-
-import dj_database_url
-
-DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}

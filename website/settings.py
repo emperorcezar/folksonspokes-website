@@ -170,4 +170,6 @@ TINYMCE_DEFAULT_CONFIG = {
     'relative_urls': False,
 }
 
-DATABASES = {}
+import dj_database_url
+
+DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}

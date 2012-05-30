@@ -17,8 +17,8 @@ MANAGERS = ADMINS
 LANGUAGES = [('en', 'en')]
 DEFAULT_LANGUAGE = 0
 
-# Heroku will take care of this for us later dynamicly.
-DATABASES = {}
+import dj_database_url
+DATABASES['default'] = dj_database_url.config()
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name

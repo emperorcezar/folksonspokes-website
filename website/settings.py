@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+import dj_database_url
+DATABASES['default'] = dj_database_url.config()
+
 import os
 
 gettext = lambda s: s
@@ -169,9 +172,3 @@ TINYMCE_DEFAULT_CONFIG = {
     'theme': "simple",
     'relative_urls': False,
 }
-
-
-DATABASES = {}
-
-import dj_database_url
-DATABASES['default'] = dj_database_url.config()

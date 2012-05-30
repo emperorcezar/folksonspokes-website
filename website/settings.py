@@ -18,6 +18,7 @@ LANGUAGES = [('en', 'en')]
 DEFAULT_LANGUAGE = 0
 
 import dj_database_url
+DATABASES = {}
 DATABASES['default'] = dj_database_url.config()
 
 # Local time zone for this installation. Choices can be found here:

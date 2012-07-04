@@ -171,4 +171,6 @@ TINYMCE_DEFAULT_CONFIG = {
     'width': '100%',
     'theme': "simple",
     'relative_urls': False,
+    'theme_advanced_styles': '',
+
 }

@@ -34,12 +34,12 @@
 </div>
 <div class="row">
 <div class="span8" id="content">
-  {{ request.page.get_title }}
+  {{ current_page.get_title }}
   <!-- content here -->
   {% placeholder content %}
   <!-- end content -->
 </div>
-{% if page.get_title != 'Calendar' %} 
+{% if current_page.get_title != 'Calendar' %} 
 <div class="span4" id="calendarbar">
 <iframe src="https://www.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=80psk6h4fe9kumtuu6un33j7ks%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=America%2FChicago" style=" border-width:0 " width="250" height="610" frameborder="0" scrolling="no"></iframe>
 </div>

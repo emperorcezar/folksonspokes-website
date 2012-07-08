@@ -154,6 +154,7 @@ INSTALLED_APPS = (
     'cms.plugins.snippet',
     'cms.plugins.googlemap',
     'cmsplugin_filer_file', 
+    'cmsplugin_filer_folder', 
     'cmsplugin_filer_teaser', 
     'cmsplugin_filer_video',
     'sekizai',

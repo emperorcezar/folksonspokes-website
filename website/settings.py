@@ -147,6 +147,7 @@ INSTALLED_APPS = (
     'mptt',
     'south',
     'filer',
+    'easy_thumbnails',
     'cms.plugins.text',
     'cms.plugins.picture',
     'cms.plugins.link',

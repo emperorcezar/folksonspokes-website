@@ -173,7 +173,7 @@ AWS_SECRET_ACCESS_KEY = 'vsGGphza8E69jobki8rTuusQvzL+TnPAeiAPVfmV'
 AWS_STORAGE_BUCKET_NAME = 'website_media'
 
 TINYMCE_DEFAULT_CONFIG = {
-    'height': '100%',
+    'height': '800px',
     'width': '100%',
     'theme': "simple",
     'relative_urls': False,

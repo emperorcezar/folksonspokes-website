@@ -8,5 +8,5 @@ django-storages
 boto
 django-mptt==0.5.1
 django-tinymce
-django-filer
--e git+https://github.com/stefanfoulis/cmsplugin-filer.git@master#egg=cmsplugin-filer
+-e git+https://github.com/stefanfoulis/django-filer.git@develop#egg=django-filer
+-e git+https://github.com/stefanfoulis/cmsplugin-filer.git@develop#egg=cmsplugin-filer

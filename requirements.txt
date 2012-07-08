@@ -1,9 +1,9 @@
-PIL==1.1.7
+PIL
 django>=1.4
-django-cms==2.2
-south==0.7.2
-psycopg2==2.4.2
-gunicorn==0.13.4
+django-cms>=2.3
+south
+psycopg2
+gunicorn
 django-storages
 boto
 django-mptt==0.5.1

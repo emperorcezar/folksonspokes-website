@@ -47,18 +47,11 @@ USE_L10N = True
 # Example: "/home/media/media.lawrence.com/"
 #MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
 
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+#STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 STATICFILES_DIRS = (
     os.path.join(PROJECT_DIR, 'static-files'),
 )
-
-# URL that handles the media served from MEDIA_ROOT. Make sure to use a
-# trailing slash if there is a path component (optional in other cases).
-# Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = '/media/'
-
-STATIC_URL = '/static/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -161,16 +154,26 @@ INSTALLED_APPS = (
     'sekizai',
     'gunicorn',
     'storages',
+    's3_folder_storage',
     'tinymce',
 )
 
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+DEFAULT_FILE_STORAGE = 's3_folder_storage.s3.DefaultStorage'
+DEFAULT_S3_PATH = ""
+STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
+STATIC_S3_PATH = "static"
 
 AWS_ACCESS_KEY_ID = 'AKIAIF7HBYUPT7MUS3VQ'
 
 AWS_SECRET_ACCESS_KEY = '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'
 
 AWS_STORAGE_BUCKET_NAME = 'website_media'
+
+MEDIA_ROOT = '/%s/' % DEFAULT_S3_PATH
+MEDIA_URL = '//s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
+STATIC_ROOT = "/%s/" % STATIC_S3_PATH
+STATIC_URL = '//s3.amazonaws.com/%s/static/' % AWS_STORAGE_BUCKET_NAME
+
 
 TINYMCE_DEFAULT_CONFIG = {
     'height': '800px',

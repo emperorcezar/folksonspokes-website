@@ -8,6 +8,5 @@ django-storages
 boto
 django-mptt==0.5.1
 django-tinymce
--e git+https://github.com/stefanfoulis/django-filer.git@develop#egg=django-filer
--e git+https://github.com/stefanfoulis/cmsplugin-filer.git@develop#egg=cmsplugin-filer
+django-directupload
 -e git+git://github.com/jamstooks/django-s3-folder-storage.git#egg=django_s3_folder_storage-dev

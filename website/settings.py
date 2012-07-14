@@ -139,7 +139,7 @@ INSTALLED_APPS = (
     'menus',
     'mptt',
     'south',
-    'filer',
+#    'filer',
     'easy_thumbnails',
     'cms.plugins.text',
     'cms.plugins.picture',

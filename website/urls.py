@@ -2,6 +2,9 @@ from django.conf.urls.defaults import *
 from django.contrib import admin
 from django.conf import settings
 
+import directupload
+directupload.admin.patch_admin()
+
 admin.autodiscover()
 
 urlpatterns = patterns('',

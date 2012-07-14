@@ -8,7 +8,7 @@ from django import forms
 from directupload.widgets import DirectUploadFileInput
 
 class FileForm(forms.ModelForm):
-    file = forms.FileFiels(widget = DirectUploadFileInput)
+    file = forms.FileField(widget = DirectUploadFileInput)
     class Meta:
         model = File
 

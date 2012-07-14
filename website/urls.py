@@ -6,6 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
+    (r'^directupload/', include('directupload.urls')),
     url(r'^', include('cms.urls')),
 )
 

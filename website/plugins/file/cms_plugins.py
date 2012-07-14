@@ -3,6 +3,16 @@ from cms.plugin_base import CMSPluginBase
 from django.utils.translation import ugettext_lazy as _
 from models import File
 from django.conf import settings
+from django import forms
+
+from directupload.widgets import DirectUploadFileInput
+
+class FileForm(forms.ModelForm):
+    file = forms.FileFiels(widget = DirectUploadFileInput)
+    class Meta:
+        model = File
+
+
 
 class FilePlugin(CMSPluginBase):
     model = File

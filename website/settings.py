@@ -53,11 +53,6 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_DIR, 'static-files'),
 )
 
-# URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
-# trailing slash.
-# Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/static/admin/'
-
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '0r6%7gip5tmez*vygfv+u14h@4lbt^8e2^26o#5_f_#b7%cm)u'
 
@@ -173,7 +168,7 @@ MEDIA_ROOT = '/%s/' % DEFAULT_S3_PATH
 MEDIA_URL = '//s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
 STATIC_ROOT = "/%s/" % STATIC_S3_PATH
 STATIC_URL = '//s3.amazonaws.com/%s/static/' % AWS_STORAGE_BUCKET_NAME
-
+ADMIN_MEDIA_PREFIX = STATIC_URL + "admin/"
 
 TINYMCE_DEFAULT_CONFIG = {
     'height': '800px',

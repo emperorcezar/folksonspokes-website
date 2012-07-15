@@ -128,7 +128,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
-    'django.contrib.admin',
     'django.contrib.staticfiles',
     'directupload',
     'cms',
@@ -152,6 +151,7 @@ INSTALLED_APPS = (
     'storages',
     's3_folder_storage',
     'tinymce',
+    'django.contrib.admin',
 )
 
 DEFAULT_FILE_STORAGE = 's3_folder_storage.s3.DefaultStorage'

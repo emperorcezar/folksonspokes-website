@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.conf import settings
 
 import directupload.admin
-#directupload.admin.patch_admin()
+directupload.admin.patch_admin()
 
 admin.autodiscover()
 

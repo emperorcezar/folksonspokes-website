@@ -1,5 +1,7 @@
 {% extends "admin/base_site.html" %}
+{% load directupload_tags %}
 {% load i18n admin_modify adminmedia cms_admin %}
+{% directupload_head %}
 
 {% block extrahead %}{{ block.super }}
 <script type="text/javascript" src="{% admin_static_url %}js/jquery.min.js"></script>

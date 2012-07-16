@@ -164,6 +164,8 @@ AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
 AWS_STORAGE_BUCKET_NAME = 'website_media'
 
+#Direct upload settings
+AWS_BUCKET_NAME = 'website_media'
 DIRECT_UPLOAD_BACKEND = 'directupload.backends.s3.S3Backend'
 
 MEDIA_ROOT = '/%s/' % DEFAULT_S3_PATH

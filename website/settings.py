@@ -53,8 +53,7 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_DIR, 'static-files'),
 )
 
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = '0r6%7gip5tmez*vygfv+u14h@4lbt^8e2^26o#5_f_#b7%cm)u'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (

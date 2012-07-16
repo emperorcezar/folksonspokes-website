@@ -21,7 +21,8 @@ class FilePlugin(CMSPluginBase):
     text_enabled = True
 
     class Media:
-        js = ("directupload/js/vendor/jquery.ui.widget.js",
+        js = ("//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js",
+              "directupload/js/vendor/jquery.ui.widget.js",
               "directupload/js/jquery.fileupload.js",
               "directupload/js/jquery.iframe-transport.js",
               "directupload/widget.js",

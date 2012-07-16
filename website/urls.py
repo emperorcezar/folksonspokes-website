@@ -19,6 +19,6 @@ urlpatterns = patterns('',
 
 urlpatterns = patterns('',
     url(r'^tiny_mce/(?P<path>.*)$', 'django.views.static.serve',
-    {'document_root': settings.PROJECT_DIR + "tiny_mce/", 'show_indexes': True}),
+    {'document_root': settings.PROJECT_DIR + "/tiny_mce/", 'show_indexes': True}),
     url(r'', include('django.contrib.staticfiles.urls')),
 ) + urlpatterns

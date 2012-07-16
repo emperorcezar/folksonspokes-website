@@ -19,6 +19,13 @@ class FilePlugin(CMSPluginBase):
     name = _("File")
     render_template = "cms/plugins/file.html"
     text_enabled = True
+
+    class Media:
+        js = ("directupload/js/vendor/jquery.ui.widget.js",
+              "directupload/js/jquery.fileupload.js",
+              "directupload/js/jquery.iframe-transport.js",
+              "directupload/widget.js",
+        )
     
     def render(self, context, instance, placeholder):  
         context.update({

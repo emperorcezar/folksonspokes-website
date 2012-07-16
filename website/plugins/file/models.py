@@ -22,7 +22,7 @@ class File(CMSPlugin):
     
     The icon search is currently performed within get_icon_url; this is probably a performance concern.
     """
-    file = models.FileField(_("file"), upload_to=CMSPlugin.get_media_path)
+    file = models.FileField(_("file"), upload_to="direct/%Y/%m/%d")
     title = models.CharField(_("title"), max_length=255, null=True, blank=True)
     # CMS_ICON_EXTENSIONS and CMS_ICON_PATH are assumed to be plugin-specific, and not included in cms.settings
     # -- they are therefore imported from django.conf.settings

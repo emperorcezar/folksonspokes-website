@@ -175,7 +175,7 @@ STATIC_ROOT = "/%s/" % STATIC_S3_PATH
 STATIC_URL = '//s3.amazonaws.com/%s/static/' % AWS_STORAGE_BUCKET_NAME
 ADMIN_MEDIA_PREFIX = STATIC_URL + "admin/"
 
-TINYMCE_JS_URL = '/static/tiny_mce/tiny_mce_src.js'
+TINYMCE_JS_URL = '/tiny_mce/tiny_mce_src.js'
 
 TINYMCE_DEFAULT_CONFIG = {
     'height': '800px',

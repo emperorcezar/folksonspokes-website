@@ -2,8 +2,10 @@ from django.conf.urls.defaults import *
 from django.contrib import admin
 from django.conf import settings
 
-import directupload.admin
-#directupload.admin.patch_admin()
+# Patch the admin
+from directupload.widgets import DirectUploadClearableFileInput
+from django.contrib.admin.options import FORMFIELD_FOR_DBFIELD_DEFAULTS
+FORMFIELD_FOR_DBFIELD_DEFAULTS[models.FileField] = {'widget': DirectUploadClearableFileInput}
 
 admin.autodiscover()
 

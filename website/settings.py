@@ -183,5 +183,5 @@ TINYMCE_DEFAULT_CONFIG = {
     'theme': "simple",
     'relative_urls': False,
     'theme_advanced_styles': '',
-    'theme_advanced_buttons3_add'' : "tablecontrols",
+    'theme_advanced_buttons3_add' : "tablecontrols",
 }

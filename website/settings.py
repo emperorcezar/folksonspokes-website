@@ -87,6 +87,7 @@ CMS_REDIRECTS = True
 
 CMS_TEMPLATES = (
     ('main.html', 'Main Template'),
+    ('mainblank.html', 'Main Template with no Calendar'),
     ('splashpage.html', 'Splash Page'),
 )
 

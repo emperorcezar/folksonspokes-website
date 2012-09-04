@@ -4,8 +4,8 @@ django-cms>=2.3
 south
 psycopg2
 gunicorn
-django-storages
-#-e hg+http://bitbucket.org/amjoconn/django-storages/@9767c6c11603#egg=django-storages
+#django-storages
+-e hg+http://bitbucket.org/amjoconn/django-storages/@9767c6c11603#egg=django-storages
 boto
 django-mptt==0.5.1
 django-tinymce

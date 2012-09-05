@@ -1,6 +1,6 @@
 PIL
 django>=1.4
-django-cms>=2.3
+django-cms>=2.3.1
 south
 psycopg2
 gunicorn

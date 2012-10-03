@@ -291,6 +291,9 @@ class Event(API_Item):
         extraparams['event_id'] = self.id
         return apiclient.get_rsvps(**extraparams)
 
+    def get_time(self):
+        return datetime.datetime.strptime(self.time, '%a %b %d %H:%M:%S %Z %Y')
+
 class Rsvp(API_Item):
     datafields = ['name', 'link', 'comment','zip','coord','lon','city','state','country','response','guests','answers','updated','created']
 

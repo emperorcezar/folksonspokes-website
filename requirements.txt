@@ -12,3 +12,4 @@ django-tinymce
 dj_database_url
 -e git+git://github.com/cuker/django-directupload.git#egg=django-directupload
 -e git+git://github.com/jamstooks/django-s3-folder-storage.git#egg=django_s3_folder_storage-dev
+easy_thumbnails

@@ -97,3 +97,15 @@ h2 {
 iframe {
     margin-bottom: 1em;
 }
+
+.meetup-calendar .month {
+    width: 700px;
+}
+
+.meetup-calendar .month td {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    vertical-align: top;
+    padding: 2px;
+}

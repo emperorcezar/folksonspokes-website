@@ -2,7 +2,7 @@
 import os
 import dj_database_url
 
-DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+DATABASES = {'default': dj_database_url.config(default='postgres://localhost/fos')}
 
 gettext = lambda s: s
 
@@ -152,6 +152,7 @@ INSTALLED_APPS = (
     's3_folder_storage',
     'tinymce',
     'django.contrib.admin',
+    'meetup_calendar',
 )
 
 DEFAULT_FILE_STORAGE = 's3_folder_storage.s3.DefaultStorage'
@@ -170,10 +171,19 @@ AWS_QUERYSTRING_AUTH = False
 AWS_BUCKET_NAME = 'website_media'
 DIRECT_UPLOAD_BACKEND = 'directupload.backends.s3.S3Backend'
 
+MEETUP_API_KEY = os.environ.get('MEETUP_API_KEY')
+MEETUP_GROUP_URLNAME = os.environ.get('MEETUP_GROUP_URLNAME')
+
 MEDIA_ROOT = '/%s/' % DEFAULT_S3_PATH
 MEDIA_URL = '//s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
-STATIC_ROOT = "/%s/" % STATIC_S3_PATH
-STATIC_URL = '//s3.amazonaws.com/%s/static/' % AWS_STORAGE_BUCKET_NAME
+
+if not DEBUG:
+    STATIC_ROOT = "/%s/" % STATIC_S3_PATH
+    STATIC_URL = '//s3.amazonaws.com/%s/static/' % AWS_STORAGE_BUCKET_NAME
+else:
+    STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+    STATIC_URL = '/static/'
+
 ADMIN_MEDIA_PREFIX = STATIC_URL + "admin/"
 
 TINYMCE_JS_URL = '/tiny_mce/tiny_mce_src.js'

@@ -1,5 +1,7 @@
+import calendar
 from calendar import HTMLCalendar
 from collections import defaultdict
+from datetime import datetime
 
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
@@ -17,7 +19,7 @@ class MeetupHTMLCalendar(HTMLCalendar):
         self.event_dict = defaultdict(list)
         
         for event in self.events:
-            day = event.get_time().day
+            day = datetime.fromtimestamp(event.get_time()).day
             self.event_dict[day].append(event)
         
     def formatday(self, day, weekday):
@@ -27,9 +29,11 @@ class MeetupHTMLCalendar(HTMLCalendar):
         if day == 0:
             return '<td class="noday">&nbsp;</td>' # day outside month
         else:
+
             td = '<td class="%s">%d' % (self.cssclasses[weekday], day)
             for event in self.event_dict[day]:
-                td += '<br>' + event.name
+                event_time = datetime.fromtimestamp(event.get_time())
+                td += '<div class="event"><a href="{}">{}<br>{}</a></div>'.format(event.event_url, event_time.strftime('%l:%M %p'), event.name)
             td += '</td>'
 
             return td
@@ -41,7 +45,19 @@ class MeetupCalendarPlugin(CMSPluginBase):
 
     def render(self, context, instance, placeholder):
         meetup = client.Meetup(settings.MEETUP_API_KEY)
-        events = meetup.get_events(group_urlname = settings.MEETUP_GROUP_URLNAME)
+        today = datetime.today()
+        first = datetime(today.year, today.month, 1)
+        last = datetime(today.year, today.month, calendar.monthrange(today.year, today.month)[1])
+
+
+        epoch = datetime.utcfromtimestamp(0)
+        start = (first - epoch).total_seconds()*1000.0
+        end = (last - epoch).total_seconds()*1000.0
+        
+
+        events = meetup.get_events(group_urlname = settings.MEETUP_GROUP_URLNAME, time = "{}, {}".format(int(start), int(end)), page=200)
+        
+        
         context.update({
             'events': events.results,
             'calendar': MeetupHTMLCalendar(events = events.results).formatmonth(2012, 10)

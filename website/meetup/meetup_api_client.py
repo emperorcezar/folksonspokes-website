@@ -44,7 +44,7 @@ COMMENTS_URI = 'comments'
 PHOTO_URI = 'photo'
 MEMBER_PHOTO_URI = '2/member_photo'
 
-API_BASE_URL = 'http://api.meetup.com/'
+API_BASE_URL = 'http://api.meetup.com/2/'
 OAUTH_BASE_URL = 'http://www.meetup.com/'
 
 
@@ -61,6 +61,7 @@ signature_method_hmac = oauth.OAuthSignatureMethod_HMAC_SHA1()
 
 class MeetupHTTPErrorProcessor(HTTPErrorProcessor):
     def http_response(self, request, response):
+        print request.get_full_url()
         try:
             return HTTPErrorProcessor.http_response(self, request, response)
         except HTTPError, e:
@@ -255,7 +256,11 @@ class API_Item(object):
     def __init__(self, properties):
          """load properties that are relevant to all items (id, etc.)"""
          for field in self.datafields:
-             self.__setattr__(field, properties[field])
+             try:
+                 self.__setattr__(field, properties[field])
+             except KeyError:
+                 self.__setattr__(field, None)
+
          self.json = properties
 
     def __repr__(self):
@@ -292,7 +297,7 @@ class Event(API_Item):
         return apiclient.get_rsvps(**extraparams)
 
     def get_time(self):
-        return datetime.datetime.strptime(self.time, '%a %b %d %H:%M:%S %Z %Y')
+        return self.time/1000
 
 class Rsvp(API_Item):
     datafields = ['name', 'link', 'comment','zip','coord','lon','city','state','country','response','guests','answers','updated','created']

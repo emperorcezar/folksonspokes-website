@@ -60,7 +60,7 @@ class MeetupCalendarPlugin(CMSPluginBase):
         
         context.update({
             'events': events.results,
-            'calendar': MeetupHTMLCalendar(events = events.results).formatmonth(2012, 10)
+            'calendar': MeetupHTMLCalendar(events = events.results, firstweekday = 6).formatmonth(2012, 10)
         })
         return context
 
